@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import "../assets/css/Header.css";
+import Logo from "../assets/img/marvel-logo.png";
 const Header = () => {
   return (
     <>
@@ -7,7 +8,7 @@ const Header = () => {
         <div className="containerheader">
           <Link to={"/"}>
             <div className="logoheader">
-              <img src="../src/assets/img/marvel-logo.png" />
+              <img src="{Logo}" />
             </div>
           </Link>
           {/* Barre de recherche */}
