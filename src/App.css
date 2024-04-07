@@ -1,0 +1,212 @@
+:root {
+  --bg: #1b1b1b;
+  --blanc: #ffffff;
+  --blanchover: rgb(255, 255, 255, 0.8);
+  --rougemarvel: #f11e22;
+  --rougeborer: #f11e2172;
+  --noir: #000000;
+  --ecriture: #242424;
+  --grisplaceholder: #bfbfbf;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Marvel", sans-serif;
+  background: var(--bg);
+}
+
+/*-------------------------- HOMEPAGE --------------------*/
+.body-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  height: 100vh;
+  padding: 40px 70px;
+  box-sizing: border-box;
+}
+
+.logo img {
+  height: 105px;
+}
+
+.left {
+  width: 25%;
+  background-color: var(--rougemarvel);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.middle {
+  width: calc(40% - 80px); /* Calcule la largeur avec la marge */
+  background-color: blue; /* Couleur de fond bleu pour le milieu */
+  margin: 0 40px; /* Marge horizontale */
+}
+
+.captain,
+.hulk {
+  width: 100%;
+  height: 100%;
+}
+
+.middle img,
+.right img {
+  width: 100%; /* Utilise toute la largeur du conteneur */
+  height: 100%; /* Utilise toute la hauteur du conteneur */
+  object-fit: cover; /* Garantit que l'image couvre bien la zone sans la déformer */
+}
+
+.right {
+  width: calc(40% - 80px); /* Calcule la largeur avec la marge */
+  background-color: green; /* Couleur de fond vert pour la droite */
+}
+
+.middle,
+.right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: calc(40% - 80px);
+  height: 100%;
+  position: relative; /* Ajouté pour permettre le positionnement absolu à l'intérieur */
+}
+
+.btnhome {
+  position: absolute;
+  top: 50%; /* Centré verticalement */
+  left: 50%; /* Centré horizontalement */
+  transform: translate(
+    -50%,
+    -50%
+  ); /* Ajustement pour centrer précisément le bouton */
+  padding: 15px 40px;
+  border: 2px solid var(--blanc);
+  background-color: transparent;
+  color: var(--blanc);
+  font-size: 20px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.btnhome:hover {
+  background-color: var(--blanc);
+  color: var(--bg);
+  border: 2px solid var(--blanc); /* Bordure noire, épaisse de 2px */
+  transition: background-color 0.6s;
+}
+
+.btnhome span {
+  font-family: "Marvel", sans-serif;
+  font-weight: bold;
+}
+/*-------------------------- END HOMEPAGE --------------------*/
+
+/*-------------------------- PERSONNAGE / COMICS --------------------*/
+.superheros {
+  height: 100%;
+  color: var(--blanc);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: stretch;
+  gap: 25px;
+}
+
+.fichecaracthers {
+  padding: 25px;
+  width: 300px;
+  height: auto;
+  background: #2a2a2a;
+  border: 2px dotted var(--rougeborer);
+}
+
+.ficheinfos > div img {
+  border-radius: 2px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.fichecomics {
+  padding: 25px;
+  width: 240px;
+  height: 530px;
+  background: #2a2a2a;
+  border: 2px dotted var(--rougeborer);
+  overflow: auto;
+}
+
+.fichecomics > div img {
+  border-radius: 2px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.fichecomics::-webkit-scrollbar {
+  display: none;
+}
+
+.titrehero,
+.titrecomics {
+  font-size: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-weight: bold;
+  color: var(--rougemarvel);
+}
+.descripthero {
+  font-size: 15px;
+  color: var(--blanc);
+}
+
+.separate {
+  width: 100%;
+  border: 1px solid red;
+  margin-bottom: 20px;
+}
+
+.btninfocharac {
+  margin-right: 10px;
+}
+
+.btncomiccarac {
+  width: 100%;
+  margin-top: 20px;
+  padding: 18px;
+  border: 2px solid var(--blanc);
+  background-color: transparent;
+  color: var(--blanc);
+  font-size: 12px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.btncomiccarac:hover {
+  background-color: var(--blanc);
+  color: var(--bg);
+  border: 2px solid var(--blanc); /* Bordure noire, épaisse de 2px */
+  transition: background-color 0.4s;
+}
+
+.fichecomicspersonnage {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.characinfocomics {
+  width: 300px;
+  height: auto;
+  padding: 30px;
+  background: #2a2a2a;
+  border: 2px dotted var(--rougeborer);
+  overflow: auto;
+  margin-top: 20px;
+}
+
+.characinfocomics img {
+  width: 100%;
+}
